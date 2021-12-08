@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registrar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <form [formGroup]="formularioRegistro" (submit)="onSubmit()">
+      <div class="">
+        <ion-item>
+          <ion-input type="text" placeholder="Nombre" formControlName="Nombre"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="Apellido Paterno" formControlName="Apellido1"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="Apellido Materno" formControlName="Apellido2"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="Matricula" formControlName="Matricula"></ion-input>
+        </ion-item>  
+        <ion-item>
+          <ion-input type="text" placeholder="Telefono" formControlName="Telefono"></ion-input>
+        </ion-item> 
+        <ion-item>
+          <ion-input type="text" placeholder="Password" formControlName="Password"></ion-input>
+        </ion-item> 
+        <ion-button (click)="guardar()" type="submit" class="ion-padding" expand= "block">Registrar</ion-button>
+      </div>
+    </form>
+
+</ion-content>

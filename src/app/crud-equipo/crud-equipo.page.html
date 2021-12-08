@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button color="primary" (click)="addEquipo()">
+        Agregar Mouse
+      </ion-button>
+    </ion-buttons>
+    <ion-title>crudEquipo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list *ngFor = "let equipo of equipo">
+    <ion-item-sliding>
+      <ion-item>
+        <ion-label>
+          <h3 class="title">{{equipo.Marca}}</h3>
+          <p class="subtext">
+            {{'Modelo: ' + equipo.Modelo + ' Conectividad: ' + equipo.Conectividad + ' ID: ' + equipo.ID_Mouse}}
+          </p>
+          </ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="removeEquipo(equipo.ID_Mouse)">
+         <ion-icon name="trash"></ion-icon> 
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

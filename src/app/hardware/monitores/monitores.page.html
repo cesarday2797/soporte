@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button color="danger" (click)="closeModal()">
+        Cerrar
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <ion-item>
+      <ion-label position='floating'>Marca</ion-label>
+      <ion-input ngModel name="Marca"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position='floating'>Modelo</ion-label>
+      <ion-input ngModel name="Modelo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position='floating'>Resolucion</ion-label>
+      <ion-input ngModel name="Resolucion"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position='floating'>Pulgadas</ion-label>
+      <ion-input ngModel name="Pulgadas"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position='floating'>Conectividad</ion-label>
+      <ion-input ngModel name="Conectividad"></ion-input>
+    </ion-item>
+    <ion-button fill="outline" expand="block" color="primary" class="ion-margin-top" type="submit">Guardar</ion-button>
+  </form>
+</ion-content>

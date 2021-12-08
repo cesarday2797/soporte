@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>    <ion-buttons slot="end">
+    <ion-button color="primary" (click)="irback()">
+      Atras
+    </ion-button>
+  </ion-buttons>
+    <ion-title>S.I.S.T.E.M.A. Hardware</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card color="primary" (click)="irMonitores()">
+          <ion-card-content>
+            <img src="assets\icon\monitor.svg">
+          </ion-card-content>
+          <ion-card-header>
+            <ion-card-title>
+              Monitores
+            </ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card color="primary" (click)="irMouse()">
+          <ion-card-content>
+            <img src="assets\icon\mouse.svg">
+          </ion-card-content>
+          <ion-card-header>
+            <ion-card-title>
+              Mouse
+            </ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card color="primary" (click)="irTeclados()">
+          <ion-card-content>
+            <img src="assets\icon\keyboard.svg">
+          </ion-card-content>
+          <ion-card-header>
+            <ion-card-title>
+              Teclados
+            </ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card color="primary" (click)="irTorres()">
+          <ion-card-content>
+            <img src="assets\icon\cpu-tower.svg">
+          </ion-card-content>
+          <ion-card-header>
+            <ion-card-title>
+              Torres
+            </ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+

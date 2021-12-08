@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button color="primary" (click)="addMouse()">
+        Agregar Mouse
+      </ion-button>
+    </ion-buttons>
+    <ion-title>crudMouse</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <ion-list *ngFor = "let mouse of mouse">
+    <ion-item-sliding>
+      <ion-item>
+        <ion-label>
+          <h3 class="title">{{mouse.Marca}}</h3>
+          <p class="subtext">
+            {{'Modelo: ' + mouse.Modelo + ' Conectividad: ' + mouse.Conectividad + ' ID: ' + mouse.ID_Mouse}}
+          </p>
+          </ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="removeMouse(mouse.ID_Mouse)">
+         <ion-icon name="trash"></ion-icon> 
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
